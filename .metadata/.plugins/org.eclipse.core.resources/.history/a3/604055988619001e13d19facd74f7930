@@ -1,0 +1,31 @@
+package com.program;
+
+import java.util.Scanner;
+
+public class StringToggle {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	String input = sc.next();
+	toggleString(input);
+	sc.close();
+}
+
+private static void toggleString(String input) {
+	// TODO Auto-generated method stub
+	for(char ch:input.toCharArray()) {
+		if(ch>=65 && ch<=90) {
+			
+			ch = (char)(ch+32);
+			
+		}else if(ch>=97 && ch<=112){
+			
+			ch = (char)(ch-32);
+					{
+						System.out.print(ch);
+					}
+			
+		}
+		
+	}
+}
+}

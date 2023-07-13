@@ -1,0 +1,25 @@
+package com.program;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class FindFrequencyOfEchCharacter {
+
+	public static void main(String[] args) {
+		LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+		String input = "apple";
+
+		for (int index = 0; index < input.length(); index++) {
+			char ch = input.charAt(index);
+			if (map.containsKey(ch)) {
+				map.put(ch, map.get(ch) + 1);
+			} else {
+				map.put(ch, 1);
+			}
+		}
+
+		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+			System.out.println(entry.getKey() + ":" + entry.getValue());
+		}
+	}
+}

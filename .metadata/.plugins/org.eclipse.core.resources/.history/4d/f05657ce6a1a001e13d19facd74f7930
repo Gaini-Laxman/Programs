@@ -1,0 +1,27 @@
+package com.program;
+
+import java.util.Scanner;
+
+public class BetweenStringAddSpecialChar {
+	
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			String input = sc.nextLine(); //sc.next();
+			String str[] = input.split(" ");
+			String newS = " ";
+			for(int i=0; i<str.length; i++) {
+				newS = newS.concat(convertIt(str[i]));
+			}
+			sc.close();
+		}
+
+		private static String convertIt(String string) {
+			// TODO Auto-generated method stub
+			char ch = string.charAt(0);
+			if(ch ) {
+				
+			}
+			
+			return null;
+		}
+}

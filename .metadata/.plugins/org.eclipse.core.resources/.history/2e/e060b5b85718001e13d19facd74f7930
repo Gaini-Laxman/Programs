@@ -1,0 +1,27 @@
+package com.program;
+
+public class Employee {
+	private String empName;
+	private String empJob;
+
+	public Employee(String empName, String empJob) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Employee [Employee Name :" + empName + ", Employee Job :" + empJob + "]";
+	}
+
+	public Object getEmpName() {
+		// TODO Auto-generated method stub
+		return "EmpName";
+	}
+
+	public Object getEmpJob() {
+		// TODO Auto-generated method stub
+		return "EmpJob";
+
+	}
+}

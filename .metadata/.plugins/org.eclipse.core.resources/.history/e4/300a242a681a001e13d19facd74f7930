@@ -1,0 +1,29 @@
+package com.program;
+
+public class FindOutLastOccurrenceOfCharacter {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String firstLine = scanner.nextLine();// madam
+		String secondLine = scanner.nextLine();// m
+		char ch = secondLine.charAt(0);// ch=m
+		lastOccurrenceOfCharacter(firstLine, ch);
+		scanner.close();
+	}
+
+	private static void lastOccurrenceOfCharacter(String firstLine, char ch) {// dell l
+		// write the logic here
+		int indexPos = -1;
+		for (int index = 0; index < firstLine.length(); index++) {
+			// linear search
+			if (firstLine.charAt(index) == ch) {
+				indexPos = index;// indexPos=3
+			}
+		}
+		if (indexPos > 0)
+			System.out.printf("%c is found at :%d", ch, indexPos);
+		else
+			System.out.printf("%c is not found!", ch);
+
+	}
+
+}

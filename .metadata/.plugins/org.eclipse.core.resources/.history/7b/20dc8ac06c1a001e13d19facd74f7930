@@ -1,0 +1,30 @@
+package com.program;
+
+import java.util.Scanner;
+
+public class BetweenStringAddSpecialChar {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine(); // Read the input string
+        String[] str = input.split(" "); // Split the string into words
+        String newS = "";
+        for (int i = 0; i < str.length; i++) {
+            newS = newS.concat(convertIt(str[i])); // Convert each word and concatenate it to the new string
+        }
+        System.out.println(newS); // Print the modified string
+        sc.close();
+    }
+
+    private static String convertIt(String string) {
+        char ch = string.charAt(0); // Get the first character of the word
+
+        if (Character.isUpperCase(ch)) { // If the first character is uppercase
+            return "##" + string.toUpperCase() + "##"; // Add special characters and convert the word to uppercase
+        } else if (Character.isLowerCase(ch)) { // If the first character is lowercase
+            return "$$" + string.toLowerCase() + "$$"; // Add special characters and convert the word to lowercase
+        }
+
+        return string; // Return the original word if it doesn't match any condition
+    }
+}

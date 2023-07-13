@@ -1,0 +1,28 @@
+package com.program;
+
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveDuplicateElementArray {
+    public static void main(String[] args) {
+    	String arr[] = {"laxman", "laxman", "ram", "maruthi", "naveen", "naveen"};
+        
+    	System.out.println("Original Array: " + Arrays.toString(arr));
+        
+        Set<String> set = new LinkedHashSet<>(Arrays.asList(arr));
+        String[] modifiedArr = set.toArray(new String[set.size()]);
+        
+        	
+        
+       System.out.println("Modified Array: " + Arrays.toString(modifiedArr));
+       
+       int arr1 [] = {1,2,3,4,5,4,1,5,6,7};
+       System.out.println("Original Array: " + Arrays.toString(arr1));
+       Set<Integer> set1 = new LinkedHashSet<>();
+       for(int ar1 : arr1) {
+           set1.add(ar1);
+           }
+       System.out.println("Modified Array:"+arr1);
+    }
+}

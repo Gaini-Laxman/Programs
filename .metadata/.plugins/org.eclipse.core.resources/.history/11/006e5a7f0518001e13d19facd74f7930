@@ -1,0 +1,15 @@
+package com.program;
+
+public class ThreadExample extends Thread {
+	@Override
+	public void run() {
+		
+		
+	}
+	public static void main(String[] args) {
+		ThreadExample t = new ThreadExample();
+		t.start();
+
+	}
+	
+}

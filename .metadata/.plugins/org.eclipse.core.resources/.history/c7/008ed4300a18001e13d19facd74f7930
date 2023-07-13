@@ -1,0 +1,13 @@
+package com.program;
+
+public class MainClass {
+public static void main(String[] args) {
+	SBI laxmanAccnt = new SBI();
+	laxmanAccnt.balance=10000;
+	
+	ATMThread ATM =new ATMThread(laxmanAccnt);
+	GpayThread Gpay = new GpayThread(laxmanAccnt);
+	ATM.start();
+	Gpay.start();
+}
+}

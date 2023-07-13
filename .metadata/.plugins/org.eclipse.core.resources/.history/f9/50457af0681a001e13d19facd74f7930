@@ -1,0 +1,38 @@
+package com.program;
+
+public class FindOutMaximumOccurrenceOfCharacter {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String firstLine = scanner.nextLine();// madam
+		// String secondLine=scanner.nextLine();//m
+		// char ch=secondLine.charAt(0);//ch=m
+		findMaximumOccurrence(firstLine);
+		scanner.close();
+	}
+
+	private static void findMaximumOccurrence(String firstLine) {
+		// Write the logic here
+		int storeCount[]=new int[256];
+		char ch1=32;
+		for(int index=0;index<firstLine.length();index++) {
+			    char ch = firstLine.charAt(index);
+			    //System.out.println((int)ch);
+			    storeCount[ch]++;
+			    if(storeCount[ch]==2) {
+			    	ch1=ch;
+			    }
+		}
+		//traverse the storeCount
+		int max=0;
+		for(int i=0;i<storeCount.length;i++) {
+			     //try atlest
+				if(storeCount[i]>storeCount[max]) {
+					 max=i;
+				}
+		}
+		System.out.printf("%c:%d",ch1,storeCount[max]);
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.program;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class PredicateJoinner {
+	
+public static void main(String[] args) {
+	
+		Employeer e1 = new Employeer("Laxman", "Hyd", "Fullstack");
+		Employeer e2 = new Employeer("Karthik", "Chennai", "DevOps");
+		Employeer e3 = new Employeer("Anand", "Mubai", "Meanstack");
+		Employeer e4 = new Employeer("Maruthi", "Banglore", "Java");
+		
+		List<Employeer> emps =Arrays.asList(e1,e2,e3,e4);
+		
+		Predicate<Employeer> p1=(e)->e.location.equals("Hyd");
+		Predicate<Employeer> p2=(e)->e.dept.equals("Fullstack");
+		Predicate<Employeer> p3=(e)->e.EmpName.startsWith("L");
+        
+		Predicate<Employeer> p = p1.or(p2).or(p3);
+		for(Employeer e : emps) {
+			if(p.test(e)) {
+			System.out.println(e.EmpName);
+		}
+		}
+		
+		
+}
+
+}

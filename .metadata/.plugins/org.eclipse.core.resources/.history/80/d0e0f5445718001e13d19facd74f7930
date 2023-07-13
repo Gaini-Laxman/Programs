@@ -1,0 +1,21 @@
+package com.program;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployeeSortExample {
+public static void main(String[] args) {
+	
+	List<Employee> l = new ArrayList<>();
+	l.add(new Employee("Laxman", "Java Developer"));
+	l.add(new Employee("Karthik", "IOS Developer"));
+	l.add(new Employee("Anand", "Sql Developer"));
+	l.add(new Employee("Maruthi", "Python Developer"));
+	l.add(new Employee("Naveen", "Java Developer"));
+	
+	l.stream().filter(e -> e.getEmpName());
+	
+	
+}
+	
+}

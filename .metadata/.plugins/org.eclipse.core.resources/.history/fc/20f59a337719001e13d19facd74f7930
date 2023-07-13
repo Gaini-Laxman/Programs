@@ -1,0 +1,15 @@
+package com.program;
+
+public class Employeer {
+	private String EmpName;
+	private String location;
+	private String dept;
+
+	public Employeer(String empName, String location, String dept) {
+		
+		// TODO Auto-generated constructor stub
+		this.EmpName=empName;
+		this.location=location;
+		this.dept=dept;
+	}
+}

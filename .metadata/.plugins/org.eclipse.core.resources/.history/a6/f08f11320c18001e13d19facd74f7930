@@ -1,0 +1,17 @@
+package com.program;
+
+public class SBI {
+
+	double balance;
+
+	public void withdraw(double amountToBeWithDrawn) {
+
+		balance = balance - amountToBeWithDrawn;
+	}
+
+	public void deposit(double amountToBeDeposited) {
+
+		balance = balance + amountToBeDeposited;
+	}
+
+}

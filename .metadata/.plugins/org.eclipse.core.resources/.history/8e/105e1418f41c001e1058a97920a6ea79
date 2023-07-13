@@ -1,0 +1,33 @@
+package com.program;
+
+import java.util.Scanner;
+
+public class CountSubstring {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String s = scanner.nextLine();
+		countAllSubString(s);
+		scanner.close();
+
+	}
+
+	private static void countAllSubString(String s) {
+
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			for (int j = i + 1; j <= s.length(); j++) {
+				String subString = s.substring(i, j);
+			}
+
+		}
+
+	}
+
+	private static int checkFirstAndLatCharacter(String s) {
+		char firstCharacter = subString.charAt(i);
+		char lastCharacter = subString.charAt(subString.length() - 1));
+		if(firstCharacter==lastCharacter) {
+			boolean = 
+		}
+	}
+}

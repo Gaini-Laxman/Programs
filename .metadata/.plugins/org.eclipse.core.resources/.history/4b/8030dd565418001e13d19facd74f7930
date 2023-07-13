@@ -1,0 +1,12 @@
+package com.program;
+
+public class Employee {
+	private String empName;
+	private String empJob;
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Employee [Employee Name :"+ empName + ", Employee Job :" +empJob+"]";
+	}
+}

@@ -1,0 +1,34 @@
+package com.program;
+
+import java.util.Scanner;
+
+public class ReverseString {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String sentence = scanner.nextLine();
+		reveseIt(sentence);
+		scanner.close();
+	}
+
+	private static void reveseIt(String sentence) {
+		for (int i = sentence.length() - 1; i >= 0; i--) {
+			//System.out.print(sentence.charAt(i));
+		}
+		// 2nd approach
+		sentence = new StringBuffer(sentence).reverse().toString();
+		//System.out.print(sentence);
+		
+		//==========================================
+		//3rd approach
+		
+		char c[] = sentence.toCharArray();
+		for(int i=0,j=c.length-1;i<j;i++,j--) {
+			char temp=c[i];
+			c[i]=c[j];
+			c[j]=temp;
+			
+		}
+		System.out.println(new String(c));
+	}
+
+}
